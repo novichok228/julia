@@ -43,20 +43,8 @@ end
 
 function direction(r)
     c = 0
-    for i in range(1,4)
-        if HSR.isborder(r,something)
-            c+=1
-            turn!(r,left)
-        end
-    end
-    if c==1
-        while !HSR.isborder(r,left)
-            turn!(r,left)
-        end
-    elseif c == 2
-        while !HSR.isborder(r,left) && !HSR.isborder(r,inverse)
-            turn!(r,left)
-        end
+    while !HSR.isborder(r, something) && !HSR.isborder(r, left)
+        turn!(r, left)
     end
     return get_direct(r)
 end
