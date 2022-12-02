@@ -10,8 +10,8 @@ mutable struct AbstractRobot
     robot::Robot
     direct::HorizonSide
     coord::Coordinates
-    right_c
-    left_c
+    right_c::Int
+    left_c::Int
 end
 
 function around!(r)
